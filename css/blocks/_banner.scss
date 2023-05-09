@@ -1,0 +1,63 @@
+.banner{
+    margin: 2.5rem 0 0;
+    &__left{
+        background-color: var(--c-green-light);
+        padding: .625rem .9375rem;
+        border-radius: 1.5625rem 1.5625rem 0 0;
+        .title{
+            font-family: "Open Sans";
+            font-size: 3.375rem;
+            font-weight: 600;
+            color: var(--c-black);
+            line-height: 3.125rem;
+            
+        }
+        .description{
+            font-family: "Open Sans";
+            font-weight: 400;
+            font-size: 20px;
+            color: var(--c-silver);
+        }
+        a{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            font-family: "Open Sans";
+            font-weight: 600;
+            color: var(--c-black);
+            gap: 1rem;
+           img{
+            background-color: rgba(255, 255, 255, 1);
+            border-radius: 3.125rem;
+           }
+        }
+    }
+    &__imgPrincipal{
+        width: 100%;
+        border-radius: 0 0 1.5625rem 1.5625rem;
+    }
+}
+
+.dropdown{
+    display: flex;
+    &__location{
+        display: flex;
+        position: relative;
+        height: 1.5rem;
+    }
+    &__input{
+        display: none;
+    }
+    &__date{
+        display: none;
+    }
+    &__date3{
+        display: none;
+    }
+    &__select{
+        display: none;
+    }
+}
+.hide{
+    display: block;
+}

@@ -12,3 +12,44 @@ function menuShow() {
     menuActive.classList.add("active");
   }
 }
+
+function dropdownShow() {
+  let dropdown = document.querySelector(".dropdown__input");
+  if (dropdown.classList.contains("hide")) {
+    dropdown.classList.remove("hide");
+  } else {
+    dropdown.classList.add("hide");
+  }
+}
+function dropdownShow2() {
+    let dropdown = document.querySelector(".dropdown__date");
+    if (dropdown.classList.contains("hide")) {
+      dropdown.classList.remove("hide");
+    } else {
+      dropdown.classList.add("hide");
+    }
+  }
+  function dropdownShow3() {
+    let dropdown = document.querySelector(".dropdown__date3");
+    if (dropdown.classList.contains("hide")) {
+      dropdown.classList.remove("hide");
+    } else {
+      dropdown.classList.add("hide");
+    }
+  }
+  function dropdownShow4() {
+    let dropdown = document.querySelector(".dropdown__select");
+    if (dropdown.classList.contains("hide")) {
+      dropdown.classList.remove("hide");
+    } else {
+      dropdown.classList.add("hide");
+    }
+  }
+  function dropdownShow5() {
+    let dropdown = document.querySelector(".dropdown__date");
+    if (dropdown.classList.contains("hide")) {
+      dropdown.classList.remove("hide");
+    } else {
+      dropdown.classList.add("hide");
+    }
+  }
