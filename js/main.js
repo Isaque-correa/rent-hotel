@@ -46,10 +46,10 @@ function dropdownShow2() {
     }
   }
   function dropdownShow5() {
-    let dropdown = document.querySelector(".dropdown__date");
-    if (dropdown.classList.contains("hide")) {
-      dropdown.classList.remove("hide");
+    let dropdown = document.querySelector(".dropdown__searchInput");
+    if (dropdown.classList.contains("searchShow")) {
+      dropdown.classList.remove("searchShow");
     } else {
-      dropdown.classList.add("hide");
+      dropdown.classList.add("searchShow");
     }
   }

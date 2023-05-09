@@ -1,24 +1,28 @@
-.banner{
+.banner {
     margin: 2.5rem 0 0;
-    &__left{
+
+    &__left {
         background-color: var(--c-green-light);
         padding: .625rem .9375rem;
         border-radius: 1.5625rem 1.5625rem 0 0;
-        .title{
+
+        .title {
             font-family: "Open Sans";
             font-size: 3.375rem;
             font-weight: 600;
             color: var(--c-black);
             line-height: 3.125rem;
-            
+
         }
-        .description{
+
+        .description {
             font-family: "Open Sans";
             font-weight: 400;
             font-size: 20px;
             color: var(--c-silver);
         }
-        a{
+
+        a {
             display: flex;
             align-items: center;
             text-decoration: none;
@@ -26,38 +30,148 @@
             font-weight: 600;
             color: var(--c-black);
             gap: 1rem;
-           img{
-            background-color: rgba(255, 255, 255, 1);
-            border-radius: 3.125rem;
-           }
+
+            img {
+                background-color: rgba(255, 255, 255, 1);
+                border-radius: 3.125rem;
+            }
         }
     }
-    &__imgPrincipal{
+
+    &__imgPrincipal {
         width: 100%;
         border-radius: 0 0 1.5625rem 1.5625rem;
     }
 }
 
-.dropdown{
+//-------------DROPDOWN--------------
+
+.dropdown {
     display: flex;
-    &__location{
+    flex-direction: column;
+    margin: 1.875rem 0 0;
+    gap: 1.875rem .625rem;
+
+    &__location {
         display: flex;
         position: relative;
-        height: 1.5rem;
+        gap: .625rem;
+        width: 100%;
+
+        img {
+            height: fit-content;
+        }
     }
-    &__input{
-        display: none;
+
+    &__link {
+        margin: 0 0 .5rem;
+        color: var(--c-black-light);
+        font-family: sans-serif;
+        font-size: 1.25rem;
     }
-    &__date{
-        display: none;
+
+    &__sub {
+        margin: 0;
+        color: var(--c-silver);
+        font-family: sans-serif;
+        font-size: .875rem;
     }
-    &__date3{
+
+    &__input {
         display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+
+        input {
+            border-radius: .3125rem;
+            padding: .3125rem;
+            width: 100%;
+        }
     }
-    &__select{
+
+    &__date {
         display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+
+        input {
+            border-radius: .3125rem;
+            padding: .3125rem;
+            background-color: var(--c-white);
+            width: 100%;
+        }
+    }
+
+    &__date3 {
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+
+        input {
+            border-radius: .3125rem;
+            padding: .3125rem;
+            background-color: var(--c-white);
+            width: 100%;
+        }
+    }
+
+    &__select {
+        display: none;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+
+        select {
+            border-radius: .3125rem;
+            padding: .3125rem;
+            background-color: var(--c-white);
+            width: 100%;
+        }
+    }
+
+    &__search {
+        background-color: var(--c-green);
+        padding: 1.25rem;
+        border-radius: 30px;
+        color: var(--c-white);
+        font-family: 'Open Sans';
+        display: flex;
+        align-items: center;
+        gap: .3125rem;
+        position: relative;
+    }
+
+    &__searchInput {
+        //display: none;
+        position: absolute;
+        left: -18.75rem;
+        transition: ease-in 0.25s;
+
+        input {
+            border-radius: 1.875rem;
+            height: 2.9375rem;
+            padding: .625rem;
+            width: 100%;
+            border: 1px solid #fff;
+            box-shadow: 0px 0px 50px black;
+        }
+
     }
 }
-.hide{
-    display: block;
+
+.hide {
+    display: flex;
+    top: 1.4375rem;
+    justify-content: center;
+
+}
+
+.searchShow {
+    display: flex;
+    left: 3.125rem;
+    transition: ease-in 0.25s;
+
 }
