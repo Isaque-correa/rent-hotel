@@ -1,0 +1,75 @@
+.card {
+    &__title {
+        font-family: "open sans";
+        font-weight: 600;
+        font-size: 2.5rem;
+        color: var(--c-black);
+    }
+
+    &__cover {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        position: relative;
+    }
+
+    &__sub {
+        font-family: "open sans";
+        font-weight: 400;
+        color: var(--c-silver);
+        width: 60%;
+    }
+
+    &__btn {
+        background: rgba(36, 171, 112, 0.1);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        padding: .375rem 1.5625rem;
+        border-radius: 17.5rem;
+        text-decoration: none;
+        color: var(--c-green);
+        font-family: "open sans";
+        font-size: 16px;
+        font-weight: 400;
+    }
+
+    // &__content{
+    //     display: ;
+    // }
+    &__figure {
+        margin: 2.5rem 0 0;
+        background: #fafafa;
+        border-radius: 16px;
+
+        img {
+            border-radius: 16px 16px 0 0;
+            width: 100%;
+        }
+    }
+
+    &__figCover {
+        padding: 0 1rem 2.375rem;
+    }
+
+    &__figureCategoria {
+        color: var(--c-green);
+        font-size: .75rem;
+        font-family: "open sans";
+    }
+
+    &__figureLink {
+        font-family: "open sans";
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--c-black);
+        text-decoration: none;
+    }
+
+    &__price {
+        font-family: "open sans";
+        font-size: 400;
+        color: var(--c-black);
+        font-size: 1rem;
+    }
+}
