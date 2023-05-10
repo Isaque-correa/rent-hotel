@@ -383,4 +383,42 @@
   font-size: 1rem;
   color: var(--c-black-light);
   gap: 1.5rem;
+}
+
+.about figure {
+  margin: 0;
+  background: #F4FBF8;
+  border-radius: 1rem;
+}
+.about figcaption {
+  padding: 0.625rem 0.625rem 2.1875rem 0.625rem;
+}
+.about img {
+  width: 100%;
+  border-radius: 1rem 1rem 0 0;
+}
+.about__title {
+  font-family: "open sans";
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: var(--c-black);
+}
+.about__description {
+  margin: 0 0 3.125rem;
+}
+.about p {
+  font-family: "open sans";
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--c-silver);
+}
+.about a {
+  background: var(--c-green);
+  text-decoration: none;
+  color: var(--c-white);
+  font-family: "open sans";
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 2.1875rem;
 }/*# sourceMappingURL=style.css.map */
