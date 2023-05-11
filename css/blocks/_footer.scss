@@ -1,0 +1,78 @@
+.footer{
+    padding-top: 200px;
+    padding-bottom: 3.9375rem;
+    &__social{
+        font-family: "open sans";
+        font-weight: 400;
+        font-size: .875rem;
+        line-height: 1.5rem;
+        color: var(--c-silver);
+    }
+    &__socialLink{
+        display: flex;
+        justify-content: space-around;
+    }
+    &__title{
+        font-family: "open sans";
+        font-weight: 400;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        color: var(--c-black);
+        text-align: center;
+    }
+    &__homeLink{
+        display: none;
+        background: var(--c-white-2);
+        border-radius: 1rem;
+        a{
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            font-family: "open sans";
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: var(--c-black-light);
+            text-align: center;
+            padding: 1rem;
+        }
+    }
+    &__helpLink{
+        display: none;
+        background: var(--c-white-2);
+        border-radius: 1rem;
+        a{
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            font-family: "open sans";
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: var(--c-black-light);
+            text-align: center;
+            padding: 1rem;
+        }
+    }
+    &__getAppLink{
+        display: none;
+        background: var(--c-white-2);
+        border-radius: 1rem;
+        a{
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            font-family: "open sans";
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: var(--c-black-light);
+            text-align: center;
+            padding: 1rem;
+        }
+    }
+
+}
+.homeShow{
+    display: block;
+}

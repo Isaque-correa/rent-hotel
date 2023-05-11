@@ -464,4 +464,83 @@
 .comment img {
   width: 100%;
   border-radius: 1rem 1rem 0 0;
+}
+
+.footer {
+  padding-top: 200px;
+  padding-bottom: 3.9375rem;
+}
+.footer__social {
+  font-family: "open sans";
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.5rem;
+  color: var(--c-silver);
+}
+.footer__socialLink {
+  display: flex;
+  justify-content: space-around;
+}
+.footer__title {
+  font-family: "open sans";
+  font-weight: 400;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: var(--c-black);
+  text-align: center;
+}
+.footer__homeLink {
+  display: none;
+  background: var(--c-white-2);
+  border-radius: 1rem;
+}
+.footer__homeLink a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  font-family: "open sans";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--c-black-light);
+  text-align: center;
+  padding: 1rem;
+}
+.footer__helpLink {
+  display: none;
+  background: var(--c-white-2);
+  border-radius: 1rem;
+}
+.footer__helpLink a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  font-family: "open sans";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--c-black-light);
+  text-align: center;
+  padding: 1rem;
+}
+.footer__getAppLink {
+  display: none;
+  background: var(--c-white-2);
+  border-radius: 1rem;
+}
+.footer__getAppLink a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  font-family: "open sans";
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: var(--c-black-light);
+  text-align: center;
+  padding: 1rem;
+}
+
+.homeShow {
+  display: block;
 }/*# sourceMappingURL=style.css.map */
