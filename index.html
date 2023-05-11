@@ -27,65 +27,70 @@
     </header>
     <main class="containerMain">
         <section class="banner">
-            <img class="banner__imgPrincipal" src="./image/image.png" alt="" srcset="">
-            <div class="banner__left">
-                <h1 class="title">Find your perfect place to stay</h1>
-                <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                <a href="#"><img src="./image/play.png" alt="">Watch video</a>
+            <div class="banner__content">
+                <img class="banner__imgPrincipal" src="./image/image.png" alt="" srcset="">
+                <div class="banner__left">
+                    <h1 class="title">Find your perfect place to stay</h1>
+                    <p class="description">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                    </p>
+                    <a href="#"><img src="./image/play.png" alt="">Watch video</a>
+                </div>
             </div>
             <div class="dropdown">
-                <div class="dropdown__location">
-                    <img src="./image/pin.png" alt="Location">
-                    <div class="dropdown__btn" onclick=dropdownShow()>
-                        <p href="#" class="dropdown__link">Location</p>
-                        <p class="dropdown__sub">United States</p>
+                <div class="dropdown__cover">
+                    <div class="dropdown__location">
+                        <img src="./image/pin.png" alt="Location">
+                        <div class="dropdown__btn" onclick=dropdownShow()>
+                            <p href="#" class="dropdown__link">Location</p>
+                            <p class="dropdown__sub">United States</p>
+                        </div>
+                        <div class="dropdown__input">
+                            <input type="text" />
+                        </div>
                     </div>
-                    <div class="dropdown__input">
-                        <input type="text" />
+                    <div class="dropdown__location">
+                        <img src="./image/calendar.png" alt="Location">
+                        <div class="dropdown__btn" onclick=dropdownShow2()>
+                            <p href="#" class="dropdown__link">Chack in</p>
+                            <p class="dropdown__sub">10 Jun 2021</p>
+                        </div>
+                        <div class="dropdown__date">
+                            <input id="date" type="date" />
+                        </div>
                     </div>
-                </div>
-                <div class="dropdown__location">
-                    <img src="./image/calendar.png" alt="Location">
-                    <div class="dropdown__btn" onclick=dropdownShow2()>
-                        <p href="#" class="dropdown__link">Chack in</p>
-                        <p class="dropdown__sub">10 Jun 2021</p>
+                    <div class="dropdown__location">
+                        <img src="./image/calendar.png" alt="Location">
+                        <div class="dropdown__btn" onclick=dropdownShow3()>
+                            <p href="#" class="dropdown__link">Chack out</p>
+                            <p class="dropdown__sub">15 Jun 2021</p>
+                        </div>
+                        <div class="dropdown__date3">
+                            <input id="date" type="date" />
+                        </div>
                     </div>
-                    <div class="dropdown__date">
-                        <input id="date" type="date" />
+                    <div class="dropdown__location">
+                        <img src="./image/Layer.png" alt="Location">
+                        <div class="dropdown__btn" onclick=dropdownShow4()>
+                            <p href="#" class="dropdown__link">Rooms for</p>
+                            <p class="dropdown__sub">1 room, 2 guests</p>
+                        </div>
+                        <div class="dropdown__select">
+                            <select name="" id="">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">3</option>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="dropdown__location">
-                    <img src="./image/calendar.png" alt="Location">
-                    <div class="dropdown__btn" onclick=dropdownShow3()>
-                        <p href="#" class="dropdown__link">Chack out</p>
-                        <p class="dropdown__sub">15 Jun 2021</p>
-                    </div>
-                    <div class="dropdown__date3">
-                        <input id="date" type="date" />
-                    </div>
-                </div>
-                <div class="dropdown__location">
-                    <img src="./image/Layer.png" alt="Location">
-                    <div class="dropdown__btn" onclick=dropdownShow4()>
-                        <p href="#" class="dropdown__link">Rooms for</p>
-                        <p class="dropdown__sub">1 room, 2 guests</p>
-                    </div>
-                    <div class="dropdown__select">
-                        <select name="" id="">
-                            <option value="">1</option>
-                            <option value="">2</option>
-                            <option value="">3</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="dropdown__location">
-                    <span class="dropdown__search" onclick=dropdownShow5()>
-                        <img src="./image/search.png" alt="Location">
-                        Search...
-                    </span>
-                    <!-- <input type="text" class=""> -->
-                    <div class="dropdown__searchInput">
-                        <input id="date" type="text" />
+                    <div class="dropdown__location">
+                        <span class="dropdown__search search" onclick=dropdownShow5()>
+                            <img src="./image/search.png" alt="Location">
+                            Search...
+                        </span>
+                        <!-- <input type="text" class=""> -->
+                        <div class="dropdown__searchInput">
+                            <input id="date" type="text" />
+                        </div>
                     </div>
                 </div>
 
