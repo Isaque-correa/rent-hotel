@@ -7,6 +7,7 @@
         @include desk{
             display: flex;
             flex-direction: row-reverse;
+            border-radius: 3.125rem 3.125rem 0 0;
         }
     }
     &__left {
@@ -24,7 +25,7 @@
             line-height: 3.125rem;
             font-size: 1.6875rem;
             @include desk {
-                font-size: 3.375rem;
+                font-size: 4rem;
             }
 
         }
@@ -53,6 +54,7 @@
             img {
                 background-color: rgba(255, 255, 255, 1);
                 border-radius: 3.125rem;
+                
             }
         }
     }
@@ -62,6 +64,13 @@
         border-radius: 1.5625rem 1.5625rem 0 0;
         @include desk{
             width: 50%;
+            height: 41rem;
+            @include desk{
+                border-radius: 0 3.125rem 0 0;
+            }
+        }
+        @include desk2{
+            height: auto;
         }
     }
     position: relative;
@@ -70,8 +79,8 @@
 //-------------DROPDOWN--------------
 .search{
     @include desk{
-        position: absolute !important;
-        padding: 2.375rem 2.875rem !important;
+        // position: absolute !important;
+        // padding: 2.375rem 2.875rem !important;
         top: 0;        
 
     }
@@ -87,14 +96,37 @@
         bottom: 2.5625rem;       
         max-width: 62.5rem;
         right: 8.75rem;
+        
+    }
+    @include desk2{
+        flex-direction: column;
+        //width: 50%;
+        left: 3.125rem;
+        bottom: -24.875rem;
+
     }
     &__cover{
+        display: flex;
+        flex-direction: column;
+        box-shadow: none;
+        gap: 3.75rem;
         @include desk{
             display: flex;
-            padding: 0 5.3125rem 0 1.875rem;
+            flex-direction: row;
+            //padding: 0 5.3125rem 0 1.875rem;
             background: var(--c-white);
             border-radius: 17.5rem;
             gap: 3.75rem;
+            height: 6.25rem;
+            padding: 0 0 0 1.875rem;
+        }
+        @include desk2{
+            border-radius: 3.125rem;
+            flex-direction: column;
+            height: auto;
+            box-shadow: 1px 1px 30px  var(--c-silver);
+            padding: 1.875rem;
+            z-index: 1;
         }
     }
 
@@ -105,7 +137,8 @@
         width: 100%;
         @include desk{
             width: auto;
-            padding: 26px 0;
+            align-items: center;
+           
         }
         img {
             height: fit-content;
@@ -193,7 +226,10 @@
         position: relative;
         @include desk{
             border-radius: 17.5rem;
+            height: 100px;
+            padding: 0 46px;
         }
+        
     }
 
     &__searchInput {
