@@ -1,47 +1,65 @@
-.footer{
+.footer {
     padding-top: 200px;
     padding-bottom: 3.9375rem;
-    &__social{
+    
+    @include desk {
+        display: flex;
+        flex-direction: initial;
+        justify-content: center;
+        
+    }
+    &__container{
+        @include desk{
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            width: 100%;
+            max-width: 1062px;
+        }
+    }
+    
+    &__social {
         font-family: "open sans";
         font-weight: 400;
         font-size: .875rem;
         line-height: 1.5rem;
         color: var(--c-silver);
+
+        @include desk {
+            max-width: 16.5rem;
+        }
     }
-    &__socialLink{
+
+    &__socialLink {
         display: flex;
         justify-content: space-around;
     }
-    &__title{
+
+    &__title {
         font-family: "open sans";
         font-weight: 400;
         font-size: 1.5rem;
         line-height: 2rem;
         color: var(--c-black);
         text-align: center;
-    }
-    &__homeLink{
-        display: none;
-        background: var(--c-white-2);
-        border-radius: 1rem;
-        a{
-            text-decoration: none;
-            display: flex;
-            flex-direction: column;
-            font-family: "open sans";
-            font-weight: 400;
-            font-size: 1rem;
-            line-height: 1.5rem;
-            color: var(--c-black-light);
-            text-align: center;
-            padding: 1rem;
+        @include desk{
+            margin: 0 0 25px;
         }
     }
-    &__helpLink{
+
+    &__homeLink {
         display: none;
         background: var(--c-white-2);
         border-radius: 1rem;
-        a{
+
+        @include desk {
+            display: flex;
+            flex-direction: column;
+            //padding-inline: 166px;
+            background: transparent;           
+        }
+
+        a {
             text-decoration: none;
             display: flex;
             flex-direction: column;
@@ -52,13 +70,26 @@
             color: var(--c-black-light);
             text-align: center;
             padding: 1rem;
+
+            @include desk {
+                padding: 0 0 16px;
+            }
         }
     }
-    &__getAppLink{
+
+    &__helpLink {
         display: none;
         background: var(--c-white-2);
         border-radius: 1rem;
-        a{
+
+        @include desk {
+            display: flex;
+            flex-direction: column;
+            background: transparent;
+
+        }
+
+        a {
             text-decoration: none;
             display: flex;
             flex-direction: column;
@@ -69,10 +100,51 @@
             color: var(--c-black-light);
             text-align: center;
             padding: 1rem;
+
+            @include desk {
+                padding: 0 0 16px;
+            }
+        }
+    }
+
+    &__getApp {
+        @include desk {
+            //padding: 0 0 0 165px;
+
+        }
+    }
+
+    &__getAppLink {
+        display: none;
+        background: var(--c-white-2);
+        border-radius: 1rem;
+
+        @include desk {
+            display: flex;
+            flex-direction: column;
+            background: transparent;
+        }
+
+        a {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            font-family: "open sans";
+            font-weight: 400;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: var(--c-black-light);
+            text-align: center;
+            padding: 1rem;
+
+            @include desk {
+                padding: 0 0 16px;
+            }
         }
     }
 
 }
-.homeShow{
+
+.homeShow {
     display: block;
 }

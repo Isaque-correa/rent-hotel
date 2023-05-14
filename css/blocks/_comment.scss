@@ -1,25 +1,43 @@
 .comment{
+
     figure{
         margin: 0;
         background: #fafafa;
         border-radius: 1rem;
+        @include desk{
+            display: flex;
+            flex-direction: row-reverse;
+            margin: 120px 0 0;
+        }
     }
     &__description{
         font-family: "open sans";
         font-weight: 400;
         font-size: 1rem;
+        line-height: 1.75rem;
         color: var(--c-silver);
-        padding: 3.125rem ;
+        padding: 3.125rem;
+        position: relative;
+        @include desk{
+            padding: 65px 139px 57px 109px;
+            margin: 0;
+        }
         &::before{
             content: url("../../image/aspas.png");
             position: absolute;
             left: 1.5625rem;
+            @include desk{
+                left: 79px;
+            }
 
         }
         &::after{
             content: url("../../image/aspas1.png");
             position: absolute;
             right: 1.5625rem;
+            @include desk{
+                right: 111px;
+            }
 
         }
 
@@ -31,6 +49,9 @@
         color: var(--c-black);
         padding: 0 0 0 3.125rem;
         margin: .4375rem 0;
+        @include desk{
+            padding: 0 0 0 109px;
+        }
     }
     &__profession{
         font-family: "open sans";
@@ -39,10 +60,16 @@
         color: var(--c-silver);
         padding: 0 0 0 3.125rem;
         margin: .75rem 0;
+        @include desk{
+            padding: 0 0 67px 109px;
+        }
 
     }
     img{
         width: 100%;
         border-radius: 1rem 1rem 0 0;
+        @include desk{
+            border-radius: 0rem 1rem 1rem 0rem;
+        }
     }
 }

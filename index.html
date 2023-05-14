@@ -14,16 +14,19 @@
 </head>
 
 <body>
-    <header class="header container ">
-        <span class="header__burger" onclick=menuShow()><a href="#" class="active"></a></span>
-        <nav class="header__nav menu-mob">
-            <a href="#">Booking</a>
-            <a href="#">Facilities</a>
-            <a href="#">About Us</a>
-            <a href="#">Location</a>
-            <a href="#">Contact</a>
-        </nav>
-        <a href="#" class="header__login">Login</a>
+    <header class="header container">
+        <section class="header__cover containerDesk">
+
+            <span class="header__burger" onclick=menuShow()><a href="#" class="active"></a></span>
+            <nav class="header__nav menu-mob">
+                <a href="#">Booking</a>
+                <a href="#">Facilities</a>
+                <a href="#">About Us</a>
+                <a href="#">Location</a>
+                <a href="#">Contact</a>
+            </nav>
+            <a href="#" class="header__login">Login</a>
+        </section>
     </header>
     <main class="containerMain">
         <section class="banner containerDesk">
@@ -130,7 +133,7 @@
                 </figure>
             </div>
         </section>
-        <section class="leisure">
+        <section class="leisure containerDesk">
             <div class="leisure__cover">
                 <h3 class="leisure__title">We do our best facilities provide you</h3>
                 <p class="leisure__sub">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
@@ -167,7 +170,7 @@
                 </ul>
             </div>
         </section>
-        <section class="about">
+        <section class="about containerDesk">
             <figure>
                 <img src="./image/about.png" alt="about">
                 <figcaption>
@@ -187,7 +190,7 @@
                 </figcaption>
             </figure>
         </section>
-        <section class="comment">
+        <section class="comment containerDesk">
             <figure>
                 <img src="./image/mask.png" alt="">
                 <figcaption class="comment__cover">
@@ -204,39 +207,42 @@
         </section>
     </main>
     <footer class="footer containerMain">
-        <div class="footer__social">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-            <div class="footer__socialLink">
-                <a href="#"><img src="./image/fb.png" alt=""></a>
-                <a href="#"><img src="./image/insta.png" alt=""></a>
-                <a href="#"><img src="./image/gmail.png" alt=""></a>
+        <section class="footer__container">
+
+            <div class="footer__social">
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                <div class="footer__socialLink">
+                    <a href="#"><img src="./image/fb.png" alt=""></a>
+                    <a href="#"><img src="./image/insta.png" alt=""></a>
+                    <a href="#"><img src="./image/gmail.png" alt=""></a>
+                </div>
             </div>
-        </div>
-        <div class="footer__home" onclick=footerShow()>
-            <h5 class="footer__title">Home</h5>
-            <div class="footer__homeLink">
-                <a href="#">Booking</a>
-                <a href="#">Facilities</a>
-                <a href="#">Location</a>
-                <a href="#">Contact</a>
+            <div class="footer__home" onclick=footerShow()>
+                <h5 class="footer__title">Home</h5>
+                <div class="footer__homeLink">
+                    <a href="#">Booking</a>
+                    <a href="#">Facilities</a>
+                    <a href="#">Location</a>
+                    <a href="#">Contact</a>
+                </div>
             </div>
-        </div>
-        <div class="footer__help" onclick=footerShow1()>
-            <h5 class="footer__title">Help</h5>
-            <div class="footer__helpLink">
-                <a href="#">About Us</a>
-                <a href="#">Help center</a>
-                <a href="#">Privacy policy</a>
-                <a href="#">FAQs</a>
+            <div class="footer__help" onclick=footerShow1()>
+                <h5 class="footer__title">Help</h5>
+                <div class="footer__helpLink">
+                    <a href="#">About Us</a>
+                    <a href="#">Help center</a>
+                    <a href="#">Privacy policy</a>
+                    <a href="#">FAQs</a>
+                </div>
             </div>
-        </div>
-        <div class="footer__getApp" onclick=footerShow2()>
-            <h5 class="footer__title">Get the app</h5>
-            <div class="footer__getAppLink">
-                <a href="#">iOS app</a>
-                <a href="#">Android app</a>
+            <div class="footer__getApp" onclick=footerShow2()>
+                <h5 class="footer__title">Get the app</h5>
+                <div class="footer__getAppLink">
+                    <a href="#">iOS app</a>
+                    <a href="#">Android app</a>
+                </div>
             </div>
-        </div>
+        </section>
     </footer>
     <script src="./js/main.js"></script>
 </body>

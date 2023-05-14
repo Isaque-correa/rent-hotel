@@ -1,7 +1,18 @@
 .header {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     position: relative;
+    padding: 0;
+    @include desk{
+        justify-content: center;
+        padding-inline: 5rem;
+    }
+    &__cover{
+        display: flex;
+        justify-content: space-between;
+        position: relative; 
+        width: 100%;
+    }
 
     &__burger {
         background-color: var(--c-green);
@@ -11,12 +22,13 @@
         display: grid;
         align-items: center;
         border-radius: .625rem;
-
+        
         a {
             border-bottom: 2px solid var(--c-white);
             display: flex;
             position: relative;
             transition: ease-in 0.25s;
+            
 
             &::after {
                 content: "";
@@ -37,6 +49,9 @@
                 border-bottom: 2px solid var(--c-white);
                 transition: ease-in 0.25s;
             }
+        }
+        @include desk{
+            display: none;
         }
     }
 
@@ -70,6 +85,7 @@
                 transition: ease-in 0.25s;
             }
         }
+        
     }
 
     &__nav {
@@ -83,15 +99,29 @@
         position: absolute;
         background-color: var(--c-green);
         left: -100%;
+        z-index: 1;
         transition: ease-in 0.25s;
+        @include desk{
+            position: initial;
+            flex-direction: row;
+            background: transparent;
+            gap: 2.5rem;
+            width: 100%;
+            justify-content: center;
+        }
 
         a {
             text-decoration: none;
             color: var(--c-white);
             font-family: "Open Sans";
-            font-weight: 700;
+            font-weight: 400;
             font-size: 1rem;
             text-align: center;
+            @include desk{
+                color: var(--c-black-light);
+                line-height: 1.5rem;
+            }
+            
         }
     }
 
@@ -103,6 +133,15 @@
         padding: .3125rem;
         gap: .625rem;
         width: 97%;
+        z-index: 1;
+        @include desk{
+            position: initial;
+            flex-direction: row;
+            background: transparent;
+            gap: 2.5rem;
+            width: 100%;
+            justify-content: center;
+        }
 
 
     }
@@ -113,6 +152,10 @@
         color: var(--c-white);
         padding: .625rem 1.25rem;
         border-radius: 2.1875rem;
+        font-size: .875rem;
+        font-weight: 400;
+        font-family: "open sans";
+        line-height: 1.25rem;
         //position: absolute;
         //right: 0;
     }

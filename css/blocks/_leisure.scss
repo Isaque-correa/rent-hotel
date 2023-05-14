@@ -1,9 +1,17 @@
-.leisure {   
+.leisure {
+    @include desk{
+        display: flex;
+        padding: 9.1875rem 0 0;
+    }   
     &__title {
         font-family: "open sans";
         font-size: 2.5rem;
         font-weight: 600;
+        line-height: 3.125rem;
         color: var(--c-black);
+        @include desk{
+            margin: 0 0 1.25rem;
+        }
     }
 
     &__sub {
@@ -12,6 +20,7 @@
         font-weight: 400;
         color: var(--c-silver);
         margin: .625rem 0 3.125rem;
+        line-height: 1.75rem;
     }
 
     &__bnt {
@@ -27,6 +36,9 @@
 
     &__options {
         margin: 9.1875rem  0 0;
+        @include desk{
+            margin: 0;
+        }
         ul {
             display: flex;
             flex-wrap: wrap;
@@ -34,6 +46,7 @@
             padding: 0;
             gap: 1.5rem;
             justify-content: center;
+            
         }
     }
 
@@ -44,8 +57,12 @@
         justify-content: center;
         align-items: center;
         border-radius: .5rem;
-        box-shadow: 0px 0px 15px 1px rgb(232, 232, 232);
-        //border: 1px solid #222;
+        
+        border: 1px solid rgb(232, 232, 232);
+        &:hover{
+            box-shadow: 0px 0px 15px 1px rgb(232, 232, 232);
+            cursor: pointer;            
+        }
 
         a {
             display: flex;
