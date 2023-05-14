@@ -528,6 +528,10 @@
   .card__figure {
     width: 100%;
   }
+  .card__figure:hover {
+    box-shadow: 0px 0px 15px 1px rgb(232, 232, 232);
+    cursor: pointer;
+  }
 }
 .card__figure img {
   border-radius: 16px 16px 0 0;
