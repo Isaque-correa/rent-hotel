@@ -791,6 +791,127 @@
   }
 }
 
+#map {
+  height: 300px;
+  width: 100%;
+}
+@media (min-width: 700px) {
+  #map {
+    height: 600px;
+    width: 100%;
+  }
+}
+
+.location {
+  margin-top: 200px;
+  position: relative;
+}
+.location__hotel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  gap: 80px;
+  background-color: var(--c-white);
+  z-index: 999;
+  bottom: 21px;
+  right: 0;
+  left: 0;
+  margin-inline: 5px;
+  border-radius: 16px;
+  padding: 8px 12px;
+}
+@media (min-width: 700px) and (max-width: 1138px) {
+  .location__hotel {
+    gap: 0px;
+  }
+}
+@media (min-width: 700px) {
+  .location__hotel {
+    margin-inline: 43px;
+    gap: 166px;
+    padding: 44px 66px;
+    bottom: 43px;
+  }
+}
+.location__title {
+  font-family: "open sans";
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 40px;
+  color: var(--c-black-light);
+  margin: 0;
+}
+@media (min-width: 700px) {
+  .location__title {
+    font-size: 36px;
+  }
+}
+.location__sub {
+  font-family: "open sans";
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 28px;
+  color: var(--c-silver);
+  max-width: 31.875rem;
+}
+@media (min-width: 700px) {
+  .location__sub {
+    font-size: 16px;
+  }
+}
+.location__form {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 700px) {
+  .location__form {
+    flex-direction: row;
+  }
+}
+.location__input {
+  border-radius: 50px;
+  border: none;
+  background-color: #fafafa;
+  padding: 14px 24px;
+}
+@media (min-width: 700px) {
+  .location__input {
+    width: 100%;
+  }
+}
+.location__input::-moz-placeholder {
+  font-family: "open sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--c-silver);
+}
+.location__input::placeholder {
+  font-family: "open sans";
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 28px;
+  color: var(--c-silver);
+}
+.location__btn {
+  font-family: "Open Sans";
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: var(--c-white);
+  letter-spacing: 0em;
+  background-color: var(--c-green);
+  border: none;
+  border-radius: 50px;
+  padding: 10px 32px;
+}
+@media (min-width: 700px) {
+  .location__btn {
+    text-align: left;
+  }
+}
+
 .footer {
   padding-top: 200px;
   padding-bottom: 3.9375rem;

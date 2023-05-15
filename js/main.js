@@ -79,3 +79,32 @@ function footerShow2() {
     dropdown.classList.add("homeShow");
   }
 }
+
+/// Map
+var map;
+
+function success(pos) {
+  console.log(pos.coords.latitude, pos.coords.longitude);
+  if (map === undefined) {
+    map = L.map("map").setView([pos.coords.latitude, pos.coords.longitude], 11);
+  } else {
+    map.remove();
+    map = L.map("map").setView([pos.coords.latitude, pos.coords.longitude], 11);
+  }
+  L.tileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+    maxZoom: 19,
+    attribution:
+      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+  }).addTo(map);
+
+  var marker = L.marker([pos.coords.latitude, pos.coords.longitude]).addTo(map);
+  var marker2 = L.marker([-23.6, -46.5]).addTo(map);
+  var marker3 = L.marker([-23.5, -46.5]).addTo(map);
+}
+function error(err) {
+  console.log(err);
+}
+var watchID = navigator.geolocation.watchPosition(success, error, {
+  enableHighAccuracy: true,
+  timeout: 5000,
+});

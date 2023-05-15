@@ -1,0 +1,113 @@
+#map {
+    height: 300px;
+    width: 100%;
+
+    @include desk {
+        height: 600px;
+        width: 100%;
+        //max-width: 1280px;
+    }
+}
+
+.location {
+    margin-top: 200px;
+    position: relative;
+
+    &__hotel {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        gap: 80px;
+        background-color: var(--c-white);
+        z-index: 999;
+        bottom: 21px;
+        right: 0;
+        left: 0;
+        margin-inline: 5px;
+        border-radius: 16px;
+        padding: 8px 12px;
+        @include desk2{
+            gap: 0px;
+        }
+        @include desk {            
+            margin-inline: 43px;
+            gap: 166px;
+            padding: 44px 66px;
+            bottom: 43px;
+        }
+    }
+
+    &__title {
+        font-family: "open sans";
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 40px;
+        color: var(--c-black-light);
+        margin: 0;
+        @include desk{
+            font-size: 36px;
+        }
+    }
+
+    &__sub {
+        font-family: "open sans";
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 28px;
+        color: var(--c-silver);
+        max-width: 31.875rem;
+        @include desk{
+            font-size: 16px; 
+        }
+    }
+
+   &__form{
+        display: flex;
+        flex-direction: column;
+       
+       @include desk{
+        flex-direction: row;
+    }
+   }
+
+    &__input {
+        //height: 56px;
+        border-radius: 50px;
+        border: none;
+        background-color: #fafafa;
+        // max-width: 436px;
+        padding: 14px 24px;
+        @include desk{
+            
+            width: 100%;
+        }
+
+        &::placeholder {
+            font-family: "open sans";
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 28px;
+            //padding: 14px 24px;
+            color: var(--c-silver);
+        }
+    }
+
+    &__btn {
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        color: var(--c-white);
+        letter-spacing: 0em;
+        
+        background-color: var(--c-green);
+        border: none;
+        border-radius: 50px;
+        padding: 10px 32px;
+        @include desk{
+            text-align: left;
+        }
+    }
+
+}

@@ -5,6 +5,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+        integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+        integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -204,6 +209,21 @@
                     <p class="comment__profession">Businessman</p>
                 </figcaption>
             </figure>
+        </section>
+        <section id="map" class="location containerDesk">
+            <div class="location__hotel">
+                <div class="location__info">
+                    <h4 class="location__title">Location of our Hotelos</h4>
+                    <p class="location__sub">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the
+                        industry's </p>
+
+                </div>
+                <form action="" class="location__form">
+                    <input type="text" placeholder="Enter your email" class="location__input">
+                    <button class="location__btn">Contact</button>
+                </form>
+            </div>
         </section>
     </main>
     <footer class="footer containerMain">
