@@ -1,16 +1,29 @@
 .header {
     display: flex;
     //justify-content: space-between;
-    position: relative;
+    // position: relative;
     padding: 0;
-    @include desk{
+    position: fixed;
+    width: 94%;
+    justify-content: space-between;
+    padding: 16px;
+    background-color: var(--c-white);
+    z-index: 999;
+    top: 0;
+    margin: 0;
+
+    @include desk {
         justify-content: center;
         padding-inline: 5rem;
+        position: relative;
+        padding: 0;
+        margin: 40px 0 0;
     }
-    &__cover{
+
+    &__cover {
         display: flex;
         justify-content: space-between;
-        position: relative; 
+        position: relative;
         width: 100%;
     }
 
@@ -22,13 +35,13 @@
         display: grid;
         align-items: center;
         border-radius: .625rem;
-        
+
         a {
             border-bottom: 2px solid var(--c-white);
             display: flex;
             position: relative;
             transition: ease-in 0.25s;
-            
+
 
             &::after {
                 content: "";
@@ -50,42 +63,44 @@
                 transition: ease-in 0.25s;
             }
         }
-        @include desk{
+
+        @include desk {
             display: none;
         }
     }
 
-    .active {
-        a {
-            border-bottom: 2px solid transparent;
-            display: flex;
-            position: relative;
+    .active.open {
+
+        border-bottom: 2px solid transparent;
+        display: flex;
+        position: relative;
+        transition: ease-in 0.25s;
+
+        &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            top: 0;
+            border-bottom: 2px solid var(--c-white);
+            transform: rotate(45deg);
             transition: ease-in 0.25s;
 
-            &::after {
-                content: "";
-                position: absolute;
-                display: block;
-                width: 100%;
-                top: 0;
-                border-bottom: 2px solid var(--c-white);
-                transform: rotate(45deg);
-                transition: ease-in 0.25s;
-
-            }
-
-            &::before {
-                content: "";
-                position: absolute;
-                display: block;
-                width: 100%;
-                top: 0;
-                border-bottom: 2px solid var(--c-white);
-                transform: rotate(-45deg);
-                transition: ease-in 0.25s;
-            }
         }
-        
+
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 100%;
+            top: 0;
+            border-bottom: 2px solid var(--c-white);
+            transform: rotate(-45deg);
+            transition: ease-in 0.25s;
+        }
+
+
+
     }
 
     &__nav {
@@ -101,7 +116,8 @@
         left: -100%;
         z-index: 1;
         transition: ease-in 0.25s;
-        @include desk{
+
+        @include desk {
             position: initial;
             flex-direction: row;
             background: transparent;
@@ -117,15 +133,16 @@
             font-weight: 400;
             font-size: 1rem;
             text-align: center;
-            @include desk{
+
+            @include desk {
                 color: var(--c-black-light);
                 line-height: 1.5rem;
             }
-            
+
         }
     }
 
-    .open {
+    &__nav.open {
         transition: ease-in 0.25s;
         display: flex;
         flex-direction: column;
@@ -134,7 +151,8 @@
         gap: .625rem;
         width: 97%;
         z-index: 1;
-        @include desk{
+
+        @include desk {
             position: initial;
             flex-direction: row;
             background: transparent;
@@ -145,6 +163,7 @@
 
 
     }
+
 
     &__login {
         text-decoration: none;

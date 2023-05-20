@@ -1,20 +1,26 @@
 .banner {
     margin: 2.5rem 0 0;
-    &__content{
+    width: 100%;
+
+    &__content {
 
         background-color: var(--c-green-light);
         border-radius: 1.5625rem;
-        @include desk{
+
+        @include desk {
             display: flex;
             flex-direction: row-reverse;
             border-radius: 3.125rem 3.125rem 0 0;
         }
     }
+
     &__left {
-        padding: 1.875rem 1.5625rem;
+        padding: 16px;
         border-radius: 0 0 1.5625rem 1.5625rem;
-        @include desk{
-            padding: 5.5rem 40px 208px 60px;
+
+        @include desk {
+            padding: 5.5rem 0px 208px 0px;
+            width: 50%;
         }
 
         .title {
@@ -22,10 +28,13 @@
             margin: 0;
             font-weight: 600;
             color: var(--c-black);
-            line-height: 3.125rem;
+            line-height: 40px;
             font-size: 1.6875rem;
+
             @include desk {
                 font-size: 4rem;
+                padding: 0 40px 0 60px;
+                line-height: 5rem;
             }
 
         }
@@ -34,11 +43,14 @@
             font-family: "Open Sans";
             font-weight: 400;
             font-size: .9375rem;
-            line-height: 2rem;
+            line-height: 25px;
             color: var(--c-silver);
-            margin: 1.875rem 0 3.125rem;
-            @include desk{
+            margin: 1.25rem 0 2.5rem;
+
+            @include desk {
                 font-size: 1.25rem;
+                padding: 0 40px 0 60px;
+                line-height: 2rem;
             }
         }
 
@@ -51,10 +63,14 @@
             color: var(--c-black);
             gap: 1rem;
 
+            @include desk {
+                padding: 0 40px 0 60px;
+            }
+
             img {
                 background-color: rgba(255, 255, 255, 1);
                 border-radius: 3.125rem;
-                
+
             }
         }
     }
@@ -62,69 +78,76 @@
     &__imgPrincipal {
         width: 100%;
         border-radius: 1.5625rem 1.5625rem 0 0;
-        @include desk{
+
+        @include desk {
             width: 50%;
-            height: 41rem;
-            @include desk{
+
+            @include desk {
                 border-radius: 0 3.125rem 0 0;
             }
         }
-        @include desk2{
+
+        @include desk2 {
             height: auto;
         }
     }
+
     position: relative;
 }
 
 //-------------DROPDOWN--------------
-.search{
-    @include desk{
-        // position: absolute !important;
-        // padding: 2.375rem 2.875rem !important;
-        top: 0;        
-
+.search {
+    @include desk {
+        top: 0;
     }
 }
+
 .dropdown {
     display: flex;
     flex-direction: column;
     margin: 1.875rem 0 0;
     gap: 1.875rem .625rem;
-    @include desk{
+
+    @include desk {
         flex-direction: initial;
         position: absolute;
-        bottom: 2.5625rem;       
-        max-width: 62.5rem;
-        right: 8.75rem;
-        
+        bottom: 2.5625rem;
+        justify-content: center;
+        width: 100%;
+
     }
-    @include desk2{
+
+    @include desk2 {
+        position: initial;
         flex-direction: column;
-        //width: 50%;
-        left: 3.125rem;
         bottom: -24.875rem;
 
     }
-    &__cover{
+
+    &__cover {
         display: flex;
         flex-direction: column;
         box-shadow: none;
-        gap: 3.75rem;
-        @include desk{
+        border: none;
+
+        @include desk {
             display: flex;
             flex-direction: row;
-            //padding: 0 5.3125rem 0 1.875rem;
             background: var(--c-white);
             border-radius: 17.5rem;
-            gap: 3.75rem;
             height: 6.25rem;
-            padding: 0 0 0 1.875rem;
+            padding: 0px;
+            border: none;
+            align-items: center;
         }
-        @include desk2{
+
+        @include desk2 {
             border-radius: 3.125rem;
             flex-direction: column;
+            align-items: start;
+            gap: 30px;
             height: auto;
-            box-shadow: 1px 1px 30px  var(--c-silver);
+            box-shadow: 1px 1px 30px var(--c-silver);
             padding: 1.875rem;
             z-index: 1;
         }
@@ -132,17 +155,26 @@
 
     &__location {
         display: flex;
+        flex-wrap: wrap;
         position: relative;
-        gap: .625rem;
         width: 100%;
-        @include desk{
+        gap: 30px;
+
+        @include desk {
             width: auto;
-            align-items: center;
-           
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 0;
+
         }
+
         img {
             height: fit-content;
         }
+    }
+
+    &__img {
+        height: 24px;
     }
 
     &__link {
@@ -150,71 +182,47 @@
         color: var(--c-black-light);
         font-family: sans-serif;
         font-size: 1.25rem;
-    }
-
-    &__sub {
+        font-weight: 400;
+        line-height: 24px;
         margin: 0;
+    }
+
+    p {
+        display: flex;
+
+        @include desk {
+            display: flex;
+            border-right: 1px solid #E8E8E8;
+            padding-inline: 30px;
+            margin: 0px;
+            gap: 10px;
+        }
+
+        @include desk2 {
+            border-right: none;
+        }
+    }
+
+    select {
+        border: none;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
         color: var(--c-silver);
-        font-family: sans-serif;
-        font-size: .875rem;
     }
 
-    &__input {
-        display: none;
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-
-        input {
-            border-radius: .3125rem;
-            padding: .3125rem;
-            width: 100%;
-        }
+    input {
+        border: none;
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16px;
+        color: var(--c-silver);
     }
 
-    &__date {
-        display: none;
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-
-        input {
-            border-radius: .3125rem;
-            padding: .3125rem;
-            background-color: var(--c-white);
-            width: 100%;
-        }
-    }
-
-    &__date3 {
-        display: none;
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-
-        input {
-            border-radius: .3125rem;
-            padding: .3125rem;
-            background-color: var(--c-white);
-            width: 100%;
-        }
-    }
-
-    &__select {
-        display: none;
-        position: absolute;
-        width: 100%;
-        z-index: 1;
-
-        select {
-            border-radius: .3125rem;
-            padding: .3125rem;
-            background-color: var(--c-white);
-            width: 100%;
-        }
-    }
-
-    &__search {
+    &__searchSubmit {
+        border: none;
         background-color: var(--c-green);
         padding: 1.25rem;
         border-radius: 30px;
@@ -224,33 +232,22 @@
         align-items: center;
         gap: .3125rem;
         position: relative;
-        @include desk{
+        width: 50%;
+
+        @include desk {
             border-radius: 17.5rem;
             height: 100px;
             padding: 0 46px;
         }
-        
-    }
 
-    &__searchInput {
-        //display: none;
-        position: absolute;
-        left: -18.75rem;
-        transition: ease-in 0.25s;
-        @include desk{
-            display: none;
-        }
-
-        input {
-            border-radius: 1.875rem;
-            height: 2.9375rem;
-            padding: .625rem;
-            width: 100%;
-            border: 1px solid #fff;
-            box-shadow: 0px 0px 50px black;
+        @include desk2 {
+            border-radius: 17.5rem;
+            height: 60px;
+            padding: 0 30px;
         }
 
     }
+
 }
 
 .hide {

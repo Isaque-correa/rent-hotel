@@ -10,6 +10,7 @@
     <!-- Make sure you put this AFTER Leaflet's CSS -->
     <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
         integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+    <link rel="stylesheet" href="./node_modules/@splidejs/splide/dist/css/splide.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -19,10 +20,10 @@
 </head>
 
 <body>
-    <header class="header container">
+    <header class="header">
         <section class="header__cover containerDesk">
 
-            <span class="header__burger" onclick=menuShow()><a href="#" class="active"></a></span>
+            <span class="header__burger"><a href="#" class="active"></a></span>
             <nav class="header__nav menu-mob">
                 <a href="#">Booking</a>
                 <a href="#">Facilities</a>
@@ -34,6 +35,18 @@
         </section>
     </header>
     <main class="containerMain">
+        <!-- <section class="splide" aria-labelledby="carousel-heading">
+            <h2 id="carousel-heading">Splide Basic HTML Example</h2>
+            
+                <div class="splide__track">
+                    <ul class="splide__list">
+                        <li class="splide__slide">Slide 01</li>
+                        <li class="splide__slide">Slide 02</li>
+                        <li class="splide__slide">Slide 03</li>
+                    </ul>
+                </div>
+                        
+        </section> -->       
         <section class="banner containerDesk">
             <div class="banner__content">
                 <img class="banner__imgPrincipal" src="./image/image.png" alt="" srcset="">
@@ -44,65 +57,49 @@
                     <a href="#"><img src="./image/play.png" alt="">Watch video</a>
                 </div>
             </div>
-            <div class="dropdown">
-                <div class="dropdown__cover">
-                    <div class="dropdown__location">
-                        <img src="./image/pin.png" alt="Location">
-                        <div class="dropdown__btn" onclick=dropdownShow()>
-                            <p href="#" class="dropdown__link">Location</p>
-                            <p class="dropdown__sub">United States</p>
-                        </div>
-                        <div class="dropdown__input">
-                            <input type="text" />
-                        </div>
-                    </div>
-                    <div class="dropdown__location">
-                        <img src="./image/calendar.png" alt="Location">
-                        <div class="dropdown__btn" onclick=dropdownShow2()>
-                            <p href="#" class="dropdown__link">Chack in</p>
-                            <p class="dropdown__sub">10 Jun 2021</p>
-                        </div>
-                        <div class="dropdown__date">
-                            <input id="date" type="date" />
-                        </div>
-                    </div>
-                    <div class="dropdown__location">
-                        <img src="./image/calendar.png" alt="Location">
-                        <div class="dropdown__btn" onclick=dropdownShow3()>
-                            <p href="#" class="dropdown__link">Chack out</p>
-                            <p class="dropdown__sub">15 Jun 2021</p>
-                        </div>
-                        <div class="dropdown__date3">
-                            <input id="date" type="date" />
-                        </div>
-                    </div>
-                    <div class="dropdown__location">
-                        <img src="./image/Layer.png" alt="Location">
-                        <div class="dropdown__btn" onclick=dropdownShow4()>
-                            <p href="#" class="dropdown__link">Rooms for</p>
-                            <p class="dropdown__sub">1 room, 2 guests</p>
-                        </div>
-                        <div class="dropdown__select">
-                            <select name="" id="">
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
+            <form class="dropdown">
+                <fieldset class="dropdown__cover">
+                    <p>
+                        <img src="./image/pin.png" alt="Location" class="dropdown__img">
+                        <label for="" class="dropdown__location">
+                            <span class="dropdown__link">Location</span>
+                            <select>
+                                <option>Selecione</option>
+                                <option selected>United States</option>
                             </select>
-                        </div>
-                    </div>
-                    <div class="dropdown__location">
-                        <span class="dropdown__search search" onclick=dropdownShow5()>
-                            <img src="./image/search.png" alt="Location">
-                            Search...
-                        </span>
-                        <!-- <input type="text" class=""> -->
-                        <div class="dropdown__searchInput">
-                            <input id="date" type="text" />
-                        </div>
-                    </div>
-                </div>
+                        </label>
+                    </p>
+                    <p>
+                        <img src="./image/calendar.png" alt="Location" class="dropdown__img">
+                        <label for="" class="dropdown__location">
+                            <span class="dropdown__link">Chack in</span>
+                            <input type="date" value="2023-05-18" class="date">
+                        </label>
 
-            </div>
+                    </p>
+                    <p>
+                        <img src="./image/calendar.png" alt="Location" class="dropdown__img">
+                        <label for="" class="dropdown__location">
+                            <span class="dropdown__link">Chack out</span>
+                            <input type="date" value="2023-05-20" class="date">
+                        </label>
+                    </p>
+                    <p>
+
+                        <img src="./image/Layer.png" alt="Location" class="dropdown__img">
+                        <label for="" class="dropdown__location">
+                            <span class="dropdown__link">Rooms for</span>
+                            <select>
+                                <option>Selecione</option>
+                                <option selected>1 room, 2 guests</option>
+                                <option selected>1 room, 3 guests</option>
+                            </select>
+                        </label>
+                    </p>
+                    <button class="dropdown__searchSubmit"><img src="./image/search.png" alt="Location">Search...</button>
+                </fieldset>
+
+            </form>            
         </section>
         <section class="card containerDesk">
             <h3 class="card__title">Our most popular Hotels</h3>
@@ -214,7 +211,8 @@
             <div class="location__hotel">
                 <div class="location__info">
                     <h4 class="location__title">Location of our Hotelos</h4>
-                    <p class="location__sub">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                    <p class="location__sub">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                        Lorem Ipsum has been
                         the
                         industry's </p>
 
@@ -237,7 +235,7 @@
                     <a href="#"><img src="./image/gmail.png" alt=""></a>
                 </div>
             </div>
-            <div class="footer__home" onclick=footerShow()>
+            <div class="footer__home">
                 <h5 class="footer__title">Home</h5>
                 <div class="footer__homeLink">
                     <a href="#">Booking</a>
@@ -246,7 +244,7 @@
                     <a href="#">Contact</a>
                 </div>
             </div>
-            <div class="footer__help" onclick=footerShow1()>
+            <div class="footer__help">
                 <h5 class="footer__title">Help</h5>
                 <div class="footer__helpLink">
                     <a href="#">About Us</a>
@@ -255,7 +253,7 @@
                     <a href="#">FAQs</a>
                 </div>
             </div>
-            <div class="footer__getApp" onclick=footerShow2()>
+            <div class="footer__getApp">
                 <h5 class="footer__title">Get the app</h5>
                 <div class="footer__getAppLink">
                     <a href="#">iOS app</a>
@@ -264,6 +262,7 @@
             </div>
         </section>
     </footer>
+    <script src="./node_modules/@splidejs/splide/dist/js/splide.min.js"></script>
     <script src="./js/main.js"></script>
 </body>
 

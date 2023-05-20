@@ -14,23 +14,25 @@
     position: relative;
 
     &__hotel {
-        display: flex;
+        display: none;
         justify-content: center;
         align-items: center;
         position: absolute;
         gap: 80px;
         background-color: var(--c-white);
         z-index: 999;
-        bottom: 21px;
+        bottom: 0px;
         right: 0;
         left: 0;
         margin-inline: 5px;
         border-radius: 16px;
         padding: 8px 12px;
         @include desk2{
+            display: flex;            
             gap: 0px;
         }
-        @include desk {            
+        @include desk {  
+            display: flex;          
             margin-inline: 43px;
             gap: 166px;
             padding: 44px 66px;
@@ -63,9 +65,10 @@
     }
 
    &__form{
-        display: flex;
-        flex-direction: column;
-       
+        display: flex;        
+       @include desk2{
+        flex-direction: column !important;
+       }
        @include desk{
         flex-direction: row;
     }

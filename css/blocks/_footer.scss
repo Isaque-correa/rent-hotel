@@ -1,11 +1,13 @@
 .footer {
-    padding-top: 200px;
-    padding-bottom: 3.9375rem;
+    padding-top: 100px;
+    padding-bottom: 30px;
     
     @include desk {
         display: flex;
         flex-direction: initial;
         justify-content: center;
+        padding-top: 200px;
+        padding-bottom: 3.9375rem;
         
     }
     &__container{
@@ -41,7 +43,6 @@
         font-size: 1.5rem;
         line-height: 2rem;
         color: var(--c-black);
-        text-align: center;
         @include desk{
             margin: 0 0 25px;
         }
@@ -51,6 +52,10 @@
         display: none;
         background: var(--c-white-2);
         border-radius: 1rem;
+
+        &.open{
+            display: block;
+        }
 
         @include desk {
             display: flex;
@@ -67,8 +72,7 @@
             font-weight: 400;
             font-size: 1rem;
             line-height: 1.5rem;
-            color: var(--c-black-light);
-            text-align: center;
+            color: var(--c-black-light);            
             padding: 1rem;
 
             @include desk {
@@ -81,6 +85,9 @@
         display: none;
         background: var(--c-white-2);
         border-radius: 1rem;
+        &.open{
+            display: block;
+        }
 
         @include desk {
             display: flex;
@@ -97,8 +104,7 @@
             font-weight: 400;
             font-size: 1rem;
             line-height: 1.5rem;
-            color: var(--c-black-light);
-            text-align: center;
+            color: var(--c-black-light);            
             padding: 1rem;
 
             @include desk {
@@ -118,6 +124,9 @@
         display: none;
         background: var(--c-white-2);
         border-radius: 1rem;
+        &.open{
+            display: block;
+        }
 
         @include desk {
             display: flex;
@@ -134,7 +143,6 @@
             font-size: 1rem;
             line-height: 1.5rem;
             color: var(--c-black-light);
-            text-align: center;
             padding: 1rem;
 
             @include desk {
