@@ -1,13 +1,19 @@
 .comment{
 
-    figure{
-        margin: 0;
+    figure{       
         background: #fafafa;
         border-radius: 1rem;
+        margin: 120px 0 0;
         @include desk{
             display: flex;
             flex-direction: row-reverse;
             margin: 120px 0 0;
+        }
+    }
+    &__cover{
+        padding: 0 0 50px;
+        @include desk{
+            padding: 0;
         }
     }
     &__description{
@@ -22,12 +28,18 @@
             padding: 65px 139px 57px 109px;
             margin: 0;
         }
+        @include desk2{
+            padding: 33px 69px 28px 54px;
+        }
         &::before{
             content: url("../../image/aspas.png");
             position: absolute;
             left: 1.5625rem;
             @include desk{
                 left: 79px;
+            }
+            @include desk2{
+                left: 24px;
             }
 
         }
@@ -37,6 +49,9 @@
             right: 1.5625rem;
             @include desk{
                 right: 111px;
+            }
+            @include desk2{
+                right: 42px;
             }
 
         }

@@ -37,17 +37,23 @@
     <main class="containerMain">
         <!-- <section class="splide" aria-labelledby="carousel-heading">
             <h2 id="carousel-heading">Splide Basic HTML Example</h2>
-            
-                <div class="splide__track">
-                    <ul class="splide__list">
-                        <li class="splide__slide">Slide 01</li>
-                        <li class="splide__slide">Slide 02</li>
-                        <li class="splide__slide">Slide 03</li>
-                    </ul>
-                </div>
-                        
-        </section> -->       
-        <section class="banner containerDesk">
+
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide"><img src="./image/house.png" alt="condominio">
+                        <figcaption class="card__figCover">
+                            <p class="card__figureCategoria">London NW8 7JT England</p>
+                            <a class="card__figureLink" href="">Danubius Hotel Regents Park</a>
+                            <p class="card__price">$200 Par Night</p>
+                        </figcaption>
+                    </li>
+                    <li class="splide__slide">Slide 02</li>
+                    <li class="splide__slide">Slide 03</li>
+                </ul>
+            </div>
+        </section> -->
+
+        <section class="banner containerDesk" aria-labelledby="carousel-heading">
             <div class="banner__content">
                 <img class="banner__imgPrincipal" src="./image/image.png" alt="" srcset="">
                 <div class="banner__left">
@@ -96,43 +102,48 @@
                             </select>
                         </label>
                     </p>
-                    <button class="dropdown__searchSubmit"><img src="./image/search.png" alt="Location">Search...</button>
+                    <button class="dropdown__searchSubmit"><img src="./image/search.png"
+                            alt="Location">Search...</button>
                 </fieldset>
 
-            </form>            
+            </form>
         </section>
-        <section class="card containerDesk">
+        <section class="splide card containerDesk">
             <h3 class="card__title">Our most popular Hotels</h3>
             <div class="card__cover">
                 <p class="card__sub">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                 <a href="#" class="card__btn">View All</a>
             </div>
-            <div class="card__content">
+            <div class="card__content splide__track">
 
-                <figure class="card__figure">
-                    <img src="./image/house.png" alt="condominio">
-                    <figcaption class="card__figCover">
-                        <p class="card__figureCategoria">London NW8 7JT England</p>
-                        <a class="card__figureLink" href="">Danubius Hotel Regents Park</a>
-                        <p class="card__price">$200 Par Night</p>
-                    </figcaption>
-                </figure>
-                <figure class="card__figure">
-                    <img src="./image/house1.png" alt="condominio">
-                    <figcaption class="card__figCover">
-                        <p class="card__figureCategoria">London NW8 7JT England</p>
-                        <a class="card__figureLink" href="">Danubius Hotel Regents Park</a>
-                        <p class="card__price">$200 Par Night</p>
-                    </figcaption>
-                </figure>
-                <figure class="card__figure">
-                    <img src="./image/house2.png" alt="condominio">
-                    <figcaption class="card__figCover">
-                        <p class="card__figureCategoria">London NW8 7JT England</p>
-                        <a class="card__figureLink" href="">Danubius Hotel Regents Park</a>
-                        <p class="card__price">$200 Par Night</p>
-                    </figcaption>
-                </figure>
+                <ul class="splide__list card__list">
+
+                    <li class="card__figure splide__slide">
+                        <img src="./image/house.png" alt="condominio">
+                        <figcaption class="card__figCover">
+                            <p class="card__figureCategoria">London NW8 7JT England</p>
+                            <a class="card__figureLink" href="">Danubius Hotel Regents Park</a>
+                            <p class="card__price">$200 Par Night</p>
+                        </figcaption>
+                    </li>
+                    <li class="card__figure splide__slide">
+                        <img src="./image/house1.png" alt="condominio">
+                        <figcaption class="card__figCover">
+                            <p class="card__figureCategoria">London NW8 7JT England</p>
+                            <a class="card__figureLink" href="">Danubius Hotel Regents Park</a>
+                            <p class="card__price">$200 Par Night</p>
+                        </figcaption>
+                    </li>
+                    <li class="card__figure splide__slide">
+                        <img src="./image/house2.png" alt="condominio">
+                        <figcaption class="card__figCover">
+                            <p class="card__figureCategoria">London NW8 7JT England</p>
+                            <a class="card__figureLink" href="">Danubius Hotel Regents Park</a>
+                            <p class="card__price">$200 Par Night</p>
+                        </figcaption>
+                    </li>
+                </ul>
+
             </div>
         </section>
         <section class="leisure containerDesk">
@@ -144,7 +155,7 @@
                 <a href="#" class="leisure__bnt">Contact Now</a>
             </div>
             <div class="leisure__options">
-                <ul>
+                <ul class="splide__list">
                     <li class="leisure__select">
                         <a href="#"><img src="./image/workspace.png" alt="" srcset="">Private Workspace</a>
                     </li>

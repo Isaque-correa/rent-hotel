@@ -57,6 +57,14 @@
         justify-content: center;
         align-items: center;
         border-radius: .5rem;
+        @include mobile{
+            width: 9.0625rem;
+            height: 9.0625rem;
+        }
+        @include mobileSmall{
+            width: 7.0625rem;
+            height: 7.0625rem;
+        }
         
         border: 1px solid rgb(232, 232, 232);
         &:hover{

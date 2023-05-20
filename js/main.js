@@ -1,16 +1,18 @@
-// const splide = new Splide(".splide", {
-//   arrows : false,
-//   perPage: 3,
-//   breakpoints: {   
-//     700: {            
-//       perPage: 2,
-//     },
-//   }
-// });
+const splide = new Splide(".splide", {
+  arrows : false,
+  perPage: 3,
+  gap: '24px',
+  breakpoints: { 
+    900: {            
+      perPage: 2,
+    },  
+    700: {            
+      perPage: 1,
+    },
+  }
+});
 
-// splide.mount();
-
-
+splide.mount();
 
 function toggleDOM(listner, target) {
   const clickElement = document.querySelector(listner)

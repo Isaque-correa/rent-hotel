@@ -522,6 +522,9 @@
   font-weight: 400;
   line-height: 1.75rem;
 }
+.card__list {
+  width: 100%;
+}
 .card__figure {
   margin: 2.5rem 0 0;
   background: #fafafa;
@@ -628,6 +631,18 @@
   border-radius: 0.5rem;
   border: 1px solid rgb(232, 232, 232);
 }
+@media (max-width: 449px) {
+  .leisure__select {
+    width: 9.0625rem;
+    height: 9.0625rem;
+  }
+}
+@media (max-width: 349px) {
+  .leisure__select {
+    width: 7.0625rem;
+    height: 7.0625rem;
+  }
+}
 .leisure__select:hover {
   box-shadow: 0px 0px 15px 1px rgb(232, 232, 232);
   cursor: pointer;
@@ -644,6 +659,9 @@
   gap: 1.5rem;
 }
 
+.about {
+  padding: 120px 0 0;
+}
 @media (min-width: 700px) {
   .about {
     padding: 7.5rem 0 0;
@@ -712,15 +730,23 @@
 }
 
 .comment figure {
-  margin: 0;
   background: #fafafa;
   border-radius: 1rem;
+  margin: 120px 0 0;
 }
 @media (min-width: 700px) {
   .comment figure {
     display: flex;
     flex-direction: row-reverse;
     margin: 120px 0 0;
+  }
+}
+.comment__cover {
+  padding: 0 0 50px;
+}
+@media (min-width: 700px) {
+  .comment__cover {
+    padding: 0;
   }
 }
 .comment__description {
@@ -738,6 +764,11 @@
     margin: 0;
   }
 }
+@media (min-width: 700px) and (max-width: 1220px) {
+  .comment__description {
+    padding: 33px 69px 28px 54px;
+  }
+}
 .comment__description::before {
   content: url("../../image/aspas.png");
   position: absolute;
@@ -748,6 +779,11 @@
     left: 79px;
   }
 }
+@media (min-width: 700px) and (max-width: 1220px) {
+  .comment__description::before {
+    left: 24px;
+  }
+}
 .comment__description::after {
   content: url("../../image/aspas1.png");
   position: absolute;
@@ -756,6 +792,11 @@
 @media (min-width: 700px) {
   .comment__description::after {
     right: 111px;
+  }
+}
+@media (min-width: 700px) and (max-width: 1220px) {
+  .comment__description::after {
+    right: 42px;
   }
 }
 .comment__author {
