@@ -105,7 +105,7 @@
 .dropdown {
     display: flex;
     flex-direction: column;
-    margin: 1.875rem 0 0;
+    margin: 100px 0 0;
     gap: 1.875rem .625rem;
 
     @include desk {
@@ -129,7 +129,12 @@
         flex-direction: column;
         box-shadow: none;
         border: none;
-
+        p{
+            margin: 0 0 50px;
+            @include desk{
+                margin: none;
+            }
+        }
         @include desk {
             display: flex;
             flex-direction: row;
@@ -244,6 +249,7 @@
             border-radius: 17.5rem;
             height: 60px;
             padding: 0 30px;
+            width: auto;
         }
 
     }

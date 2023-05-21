@@ -1,20 +1,26 @@
 .card {
     padding: 0;
-    @include desk{
+    margin-top: 100px;    
+    @include desk {
         padding: 7.5rem 0 0;
         width: 100%;
+        margin-top: 0;
     }
-    @include desk2{
+
+    @include desk2 {
         padding: 120px 0 0;
     }
+
     &__title {
         font-family: "open sans";
         font-weight: 600;
         font-size: 2.5rem;
-        line-height: 3.75rem;
+        line-height: 40px;
         color: var(--c-black);
-        @include desk{
+
+        @include desk {
             margin: 0 0 1.25rem;
+            line-height: 3.75rem;
         }
     }
 
@@ -22,24 +28,27 @@
         display: flex;
         width: 100%;
         justify-content: space-between;
-        position: relative;        
+        position: relative;
     }
-    &__content{
-        @include desk{
+
+    &__content {
+        @include desk {
             display: flex;
             gap: 1.5rem;
-        }   
+        }
     }
 
     &__sub {
         font-family: "open sans";
         font-weight: 400;
-        line-height: 1.75rem;
+        line-height: 25px;
         color: var(--c-silver);
         width: 60%;
-        @include desk{
+
+        @include desk {
             width: 38%;
             margin: 0;
+            line-height: 1.75rem;
         }
     }
 
@@ -55,22 +64,31 @@
         font-family: "open sans";
         font-size: 16px;
         font-weight: 400;
-        line-height: 1.75rem;
+        line-height: 25px;
+
+        @include desk {
+            line-height: 1.75rem;
+        }
     }
-    &__list{
+
+    &__list {
         width: 100%;
     }
+
     &__figure {
         margin: 2.5rem 0 0;
         background: #fafafa;
         border-radius: 16px;
-        @include desk{
+
+        @include desk {
             width: 100%;
-            &:hover{
+
+            &:hover {
                 box-shadow: 0px 0px 15px 1px rgb(232, 232, 232);
-                cursor: pointer;            
+                cursor: pointer;
             }
         }
+
         img {
             border-radius: 16px 16px 0 0;
             width: 100%;
@@ -79,9 +97,10 @@
 
     &__figCover {
         padding: 0 1rem 2.375rem;
-        @include desk{
+
+        @include desk {
             padding: 1.5rem 0px 38px 16px;
-           
+
         }
     }
 

@@ -1,4 +1,4 @@
-const splide = new Splide(".splide", {
+const splide = new Splide("#slider1", {
   arrows : false,
   perPage: 3,
   gap: '24px',

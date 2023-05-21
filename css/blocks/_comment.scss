@@ -30,6 +30,7 @@
         }
         @include desk2{
             padding: 33px 69px 28px 54px;
+            line-height: 1.75rem;
         }
         &::before{
             content: url("../../image/aspas.png");

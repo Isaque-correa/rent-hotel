@@ -16,7 +16,7 @@
   justify-content: space-between;
   padding: 16px;
   background-color: var(--c-white);
-  z-index: 999;
+  z-index: 1001;
   top: 0;
   margin: 0;
 }
@@ -304,7 +304,7 @@
 .dropdown {
   display: flex;
   flex-direction: column;
-  margin: 1.875rem 0 0;
+  margin: 100px 0 0;
   gap: 1.875rem 0.625rem;
 }
 @media (min-width: 700px) {
@@ -328,6 +328,14 @@
   flex-direction: column;
   box-shadow: none;
   border: none;
+}
+.dropdown__cover p {
+  margin: 0 0 50px;
+}
+@media (min-width: 700px) {
+  .dropdown__cover p {
+    margin: none;
+  }
 }
 @media (min-width: 700px) {
   .dropdown__cover {
@@ -442,6 +450,7 @@
     border-radius: 17.5rem;
     height: 60px;
     padding: 0 30px;
+    width: auto;
   }
 }
 
@@ -459,11 +468,13 @@
 
 .card {
   padding: 0;
+  margin-top: 100px;
 }
 @media (min-width: 700px) {
   .card {
     padding: 7.5rem 0 0;
     width: 100%;
+    margin-top: 0;
   }
 }
 @media (min-width: 700px) and (max-width: 1220px) {
@@ -475,12 +486,13 @@
   font-family: "open sans";
   font-weight: 600;
   font-size: 2.5rem;
-  line-height: 3.75rem;
+  line-height: 40px;
   color: var(--c-black);
 }
 @media (min-width: 700px) {
   .card__title {
     margin: 0 0 1.25rem;
+    line-height: 3.75rem;
   }
 }
 .card__cover {
@@ -498,7 +510,7 @@
 .card__sub {
   font-family: "open sans";
   font-weight: 400;
-  line-height: 1.75rem;
+  line-height: 25px;
   color: var(--c-silver);
   width: 60%;
 }
@@ -506,6 +518,7 @@
   .card__sub {
     width: 38%;
     margin: 0;
+    line-height: 1.75rem;
   }
 }
 .card__btn {
@@ -520,7 +533,12 @@
   font-family: "open sans";
   font-size: 16px;
   font-weight: 400;
-  line-height: 1.75rem;
+  line-height: 25px;
+}
+@media (min-width: 700px) {
+  .card__btn {
+    line-height: 1.75rem;
+  }
 }
 .card__list {
   width: 100%;
@@ -570,22 +588,27 @@
   font-size: 1rem;
 }
 
+.leisure {
+  margin-top: 100px;
+}
 @media (min-width: 700px) {
   .leisure {
     display: flex;
     padding: 9.1875rem 0 0;
+    margin-top: 0;
   }
 }
 .leisure__title {
   font-family: "open sans";
   font-size: 2.5rem;
   font-weight: 600;
-  line-height: 3.125rem;
+  line-height: 40px;
   color: var(--c-black);
 }
 @media (min-width: 700px) {
   .leisure__title {
     margin: 0 0 1.25rem;
+    line-height: 3.125rem;
   }
 }
 .leisure__sub {
@@ -700,12 +723,13 @@
   font-family: "open sans";
   font-weight: 600;
   font-size: 2.5rem;
-  line-height: 3.125rem;
+  line-height: 40px;
   color: var(--c-black);
 }
 @media (min-width: 700px) {
   .about__title {
     margin: 0 0 1.25rem;
+    line-height: 3.125rem;
   }
 }
 .about__description {
@@ -715,8 +739,8 @@
   font-family: "open sans";
   font-weight: 400;
   font-size: 1rem;
-  line-height: 1.75rem;
   color: var(--c-silver);
+  line-height: 1.75rem;
 }
 .about a {
   background: var(--c-green);
@@ -767,6 +791,7 @@
 @media (min-width: 700px) and (max-width: 1220px) {
   .comment__description {
     padding: 33px 69px 28px 54px;
+    line-height: 1.75rem;
   }
 }
 .comment__description::before {
@@ -841,21 +866,30 @@
 }
 @media (min-width: 700px) {
   #map {
-    height: 600px;
+    height: 677px;
     width: 100%;
+  }
+}
+
+.location__container {
+  width: 100%;
+}
+@media (min-width: 700px) {
+  .location__container {
+    position: relative;
   }
 }
 
 .location {
   margin-top: 200px;
-  position: relative;
 }
 .location__hotel {
-  display: none;
+  display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
-  position: absolute;
-  gap: 80px;
+  position: static;
+  gap: 40px;
   background-color: var(--c-white);
   z-index: 999;
   bottom: 0px;
@@ -864,26 +898,33 @@
   margin-inline: 5px;
   border-radius: 16px;
   padding: 8px 12px;
-}
-@media (min-width: 700px) and (max-width: 1220px) {
-  .location__hotel {
-    display: flex;
-    gap: 0px;
-  }
+  align-items: end;
 }
 @media (min-width: 700px) {
   .location__hotel {
     display: flex;
+    flex-direction: row;
+    position: absolute;
     margin-inline: 43px;
     gap: 166px;
     padding: 44px 66px;
     bottom: 43px;
   }
 }
+@media (min-width: 700px) and (max-width: 1220px) {
+  .location__hotel {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    gap: 30px;
+    padding: 30px 0 0;
+    margin: 0;
+  }
+}
 .location__title {
   font-family: "open sans";
   font-weight: 600;
-  font-size: 18px;
+  font-size: 1.5rem;
   line-height: 40px;
   color: var(--c-black-light);
   margin: 0;
@@ -896,7 +937,7 @@
 .location__sub {
   font-family: "open sans";
   font-weight: 400;
-  font-size: 12px;
+  font-size: 16px;
   line-height: 28px;
   color: var(--c-silver);
   max-width: 31.875rem;
@@ -906,17 +947,23 @@
     font-size: 16px;
   }
 }
+.location__info {
+  width: 100%;
+}
+@media (min-width: 700px) {
+  .location__info {
+    width: 100%;
+  }
+}
 .location__form {
   display: flex;
-}
-@media (min-width: 700px) and (max-width: 1220px) {
-  .location__form {
-    flex-direction: column !important;
-  }
+  width: 100%;
+  justify-content: flex-start;
 }
 @media (min-width: 700px) {
   .location__form {
     flex-direction: row;
+    width: 100%;
   }
 }
 .location__input {
@@ -924,10 +971,16 @@
   border: none;
   background-color: #fafafa;
   padding: 14px 24px;
+  width: 100%;
 }
 @media (min-width: 700px) {
   .location__input {
     width: 100%;
+  }
+}
+@media (min-width: 700px) and (max-width: 1220px) {
+  .location__input {
+    width: auto;
   }
 }
 .location__input::-moz-placeholder {
