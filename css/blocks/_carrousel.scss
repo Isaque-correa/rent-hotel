@@ -1,0 +1,211 @@
+.category {
+    margin: 160px 0 0;
+
+    @include desk {
+        display: flex;
+        width: 100%;
+        max-width: 1192px;
+        margin: 160px 0 0;
+        gap: 86px;
+
+    }
+
+    @include tablet {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__mobilia {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        position: relative;
+        width: 100%;
+    }
+
+
+
+    &__imgPrincipal {
+        width: 100%;
+        height: -webkit-fill-available;
+        border-radius: 20px;
+    }
+
+    &__imgList {
+        border-radius: 20px;
+        margin-right: 0 !important;
+    }
+
+    &__imgSegundario {
+        background-color: yellow;
+        border-radius: 20px;
+    }
+
+    &__inform {
+        width: 100%;
+    }
+
+    &__tag {
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        color: var(--c-green);
+        margin: 0;
+
+    }
+
+    &__title {
+        font-family: "Open Sans";
+        font-size: 28px;
+        font-weight: 600;
+        line-height: 35px;
+        color: var(--c-black-light);
+        margin: 9px 0 28px;
+
+    }
+
+    &__price {
+        font-family: "Open Sans";
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 21px;
+        color: var(--c-black-light);
+        margin: 0;
+    }
+
+    &__description {
+        font-family: "Open Sans";
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 16px;
+        color: var(--c-black);
+        margin: 41px 0 0;
+
+    }
+
+    &__bntCover {
+        display: flex;
+        justify-content: end;
+    }
+
+    &__bnt {
+        text-decoration: none;
+        background-color: var(--c-green);
+        color: var(--c-white);
+        max-width: 205px;
+        padding: 9px 40px;
+        border-radius: 26px;
+        font-family: "Open Sans";
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 25px;
+        margin: 65px 0 0;
+
+    }
+
+}
+
+.ajuste {
+    justify-content: end;
+    gap: 50px;
+}
+
+.categoryComments {
+    margin: 0rem;
+    @include desk {
+        position: absolute;
+        background: var(--c-white);
+        width: 100%;
+        max-width: 288px;
+        border-radius: 6px;
+        padding: 20px 0px 20px 20px;
+        bottom: -60px;
+        left: -107px;
+        box-shadow: 8px 8px 49px rgba(25, 57, 70, 0.25);
+        z-index: 1;
+    }
+
+    @include laptop {
+        margin: 0 5rem;
+    }
+
+    &__user {
+        display: flex;
+        gap: 30px;
+        justify-content: space-between;
+        margin-bottom: 15px;
+    }
+
+    &__name {
+        font-family: "Open Sans";
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 29px;
+        color: #021C1C;
+        margin: 0px;
+    }
+
+    &__cargo {
+        font-family: "Open Sans";
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 17px;
+        color: #3E5658;
+        margin: 8px 0 0;
+    }
+
+    &__commentsLabel {
+        width: 100%;
+    }
+
+    &__ratImg {
+        @include desk {
+            display: flex;
+            position: relative;
+            align-items: end;
+            flex-direction: initial;
+        }
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        width: 100%;
+    }
+
+    &__img {
+        @include desk {
+            position: absolute;
+        }
+
+        width: 50px;
+        height: auto;
+        border-radius: 50%;
+        padding: 5px;
+        border: 1px solid var(--c-silver);
+        right: -28px;
+        top: -47px;
+        background-color: var(--c-white);
+
+    }
+
+    &__rating {
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        color: var(--c-green);
+        margin: 0;
+
+    }
+
+    &__description {
+        font-family: "Open Sans";
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 27px;
+        color: #122237;
+        margin: 0px;
+
+    }
+}

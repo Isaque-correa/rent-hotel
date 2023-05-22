@@ -1,22 +1,26 @@
 .about {
-    padding: 120px 0 0 ;
-    @include desk{
+    padding: 120px 0 0;
+
+    @include desk {
         padding: 7.5rem 0 0;
     }
+
     figure {
         margin: 0;
         background: #F4FBF8;
         border-radius: 1rem;
-        @include desk{
+
+        @include desk {
             display: flex;
-           // align-items: center;
+            // align-items: center;
             gap: 4.375rem;
         }
     }
 
     figcaption {
         padding: .625rem .625rem 2.1875rem .625rem;
-        @include desk{
+
+        @include desk {
             padding: 4.75rem 85px 0 0;
         }
     }
@@ -24,7 +28,8 @@
     img {
         width: 100%;
         border-radius: 1rem 1rem 0 0;
-        @include desk{
+
+        @include desk {
             border-radius: 1rem 0 0 16px;
             width: 50%;
         }
@@ -36,7 +41,8 @@
         font-size: 2.5rem;
         line-height: 40px;
         color: var(--c-black);
-        @include desk{
+
+        @include desk {
             margin: 0 0 1.25rem;
             line-height: 3.125rem;
         }
@@ -52,9 +58,8 @@
         font-size: 1rem;
         color: var(--c-silver);
         line-height: 1.75rem;
-        @include desk{
 
-        }
+        @include desk {}
     }
 
     a {
@@ -65,7 +70,105 @@
         font-weight: 600;
         font-size: 1rem;
         padding: 1rem 2rem;
-        border-radius: 2.1875rem;        
+        border-radius: 2.1875rem;
+
+    }
+}
+
+.about-us {
+    width: 100%;
+    margin: 124px 0 0;
+    img {
+        filter: drop-shadow(0px 0.698649px 16.0689px rgba(0, 0, 0, 0.25));
+        width: 100%;
+        border-radius: 37px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--c-green-light);
+        border-radius: 37px;
+        gap: 63px;
+        @include desk {
+            display: flex;
+            flex-direction: row;
+            gap: 126px;
+        }
+
+        @include tablet {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        font-family: " Open Sans";
+        font-size: 37px;
+        font-weight: 600;
+        line-height: 46px;
+        color: var(--c-black);
+        margin: 0 0 18px;
+        padding-inline: 20px;
+        @include desk{
+            padding-inline: 0;
+        }
+
+    }
+
+    .paragraph {
+        margin: 21px 0 30px 0;
+    }
+
+    &__pragraph {
+        font-family: "Open Sans";
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 26px;
+        color: var(--c-black);
+        margin: 0;
+        padding-inline: 20px;
+        
+        @include desk {
+            max-width: 461.67px;
+            padding: 0px;
+            padding-inline: 0;
+        }
+
+    }
+
+    &__cover {
+        //width: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        //padding: 20px;
+        padding-bottom: 79px;
+        @include desk {
+            padding: 82px 79px 79px 0;
+            width: 100%;
+
+        }
+
+        @include tablet {
+            padding: 0px 79px 79px 79px;
+            width: auto;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        background-color: var(--c-green);
+        color: var(--c-white);
+        font-family: Open Sans;
+        font-size: 15px;
+        font-weight: 600;
+        line-height: 22px;
+        padding: 13px 25px;
+        border-radius: 37px;
+        margin-inline: 20px;
+        @include desk{
+            margin-inline:0;
+        }
 
     }
 }

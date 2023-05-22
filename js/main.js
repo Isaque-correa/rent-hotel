@@ -1,19 +1,82 @@
-const splide = new Splide("#slider1", {
-  arrows : false,
-  perPage: 3,
-  gap: '24px',
-  breakpoints: { 
-    900: {            
-      perPage: 2,
-    },  
-    700: {            
-      perPage: 1,
-    },
-  }
+// const splide = new Splide("#slider1", {
+//   arrows : false,
+//   perPage: 3,
+//   gap: '24px',
+//   breakpoints: { 
+//     900: {            
+//       perPage: 2,
+//     },  
+//     700: {            
+//       perPage: 1,
+//     },
+//   }
+// });
+// splide.mount();
+//---------------------------------------------------
+document.addEventListener('DOMContentLoaded',function(){
+   new Splide("#slider1", {
+    arrows : false,
+    perPage: 3,
+    gap: '24px',
+    breakpoints: { 
+      900: {            
+        perPage: 2,
+      },  
+      700: {            
+        perPage: 1,
+      },
+    }
+  }).mount();
 });
 
-splide.mount();
+// document.addEventListener( 'DOMContentLoaded', function () {
+//   new Splide( '#thumbnail-slider', {
+// 		fixedWidth : 100,
+//     fixedHeight: 60,
+// 		gap        : 10,
+// 		rewind     : true,
+// 		pagination : false,
+//     cover      : true,
+//     isNavigation: true,
+//     focus      : 'center',
+//   breakpoints: {
+//     600: {
+//       fixedWidth : 60,
+//       fixedHeight: 44,
+//     },
+//   },
+//   } ).mount();
+// } );
+document.addEventListener( 'DOMContentLoaded', function () {
+  var main = new Splide( '#main-slider', {
+    type      : 'fade',
+    rewind    : true,
+    pagination: false,
+    arrows    : false,
+  } );
 
+  var thumbnails = new Splide( '#thumbnail-slider', {
+    fixedWidth : 100,
+    fixedHeight: 60,
+		gap        : 10,
+		rewind     : true,
+    arrows    : false,
+		pagination : false,
+    cover      : true,
+    isNavigation: true,
+    //focus      : 'center',
+    breakpoints : {
+      600: {
+        fixedWidth : 60,
+        fixedHeight: 44,
+      },
+    },
+  } );
+
+  main.sync( thumbnails );
+  main.mount();
+  thumbnails.mount();
+} );
 function toggleDOM(listner, target) {
   const clickElement = document.querySelector(listner)
   const toggleElement = document.querySelector(target);
@@ -22,26 +85,17 @@ function toggleDOM(listner, target) {
   });
 }
 
-// function menuShow() {
-//   let menuMobile = document.querySelector(".header__nav");
-//   if (menuMobile.classList.contains("open")) {
-//     menuMobile.classList.remove("open");
-//   } else {
-//     menuMobile.classList.add("open");
-//   }
-//   let menuActive = document.querySelector(".header__burger");
-//   if (menuActive.classList.contains("active")) {
-//     menuActive.classList.remove("active");
-//   } else {
-//     menuActive.classList.add("active");
-//   }
-// }
-
 toggleDOM('.header__burger', '.active');
 toggleDOM('.header__burger', '.header__nav');
 toggleDOM('.footer__home','.footer__homeLink');
 toggleDOM('.footer__help','.footer__helpLink');
 toggleDOM('.footer__getApp','.footer__getAppLink');
+toggleDOM('.frequentlyAsked__question', '.frequentlyAsked__response');
+toggleDOM('.frequentlyAsked__question-1', '.frequentlyAsked__response-1');
+toggleDOM('.frequentlyAsked__question-2', '.frequentlyAsked__response-2');
+toggleDOM('.frequentlyAsked__question', '.rightTitle');
+toggleDOM('.frequentlyAsked__question-1', '.rightTitle-1');
+toggleDOM('.frequentlyAsked__question-2', '.rightTitle-2');
 
 
 /// Map
