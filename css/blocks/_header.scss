@@ -37,30 +37,28 @@
         border-radius: .625rem;
 
         a {
-            border-bottom: 2px solid var(--c-white);
+            height: 2px;
+            background-color: var(--c-white);
+            width: 100%;
             display: flex;
             position: relative;
             transition: ease-in 0.25s;
 
 
-            &::after {
+            &::after, &::before {
                 content: "";
                 position: absolute;
                 display: block;
                 width: 100%;
-                top: .3125rem;
-                border-bottom: 2px solid var(--c-white);
+                height: 2px;                
+                background-color: var(--c-white);
                 transition: ease-in 0.25s;
             }
-
-            &::before {
-                content: "";
-                position: absolute;
-                display: block;
-                width: 100%;
-                bottom: .1875rem;
-                border-bottom: 2px solid var(--c-white);
-                transition: ease-in 0.25s;
+            &::after{
+                top: 8px;
+            }
+            &::before {               
+                bottom: 8px;
             }
         }
 
@@ -71,32 +69,20 @@
 
     .active.open {
 
-        border-bottom: 2px solid transparent;
+        background-color: transparent;
         display: flex;
-        position: relative;
-        transition: ease-in 0.25s;
 
         &::after {
-            content: "";
-            position: absolute;
-            display: block;
-            width: 100%;
-            top: 0;
-            border-bottom: 2px solid var(--c-white);
+            content: "";            
+            top: 0;           
             transform: rotate(45deg);
-            transition: ease-in 0.25s;
 
         }
 
         &::before {
             content: "";
-            position: absolute;
-            display: block;
-            width: 100%;
             top: 0;
-            border-bottom: 2px solid var(--c-white);
             transform: rotate(-45deg);
-            transition: ease-in 0.25s;
         }
 
 
